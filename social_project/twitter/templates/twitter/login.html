@@ -1,0 +1,40 @@
+{% extends 'twitter/layout.html' %}
+{% load static %}
+{% block content %}
+
+<body class="login-page">
+    <div class="twitter-login-box">
+        <header>
+            <img src="{% static 'img/clinic-icon.svg' %}"
+                alt="twitter logo">
+            <h1>Inicia Sesión</h1>
+        </header>
+
+        <form method="post" >
+            {% csrf_token %}
+            <div class="input-wrapper">
+                <label for="user-name-id">Username</label>
+                {{form.username}}
+            </div>
+
+            <div class="input-wrapper">
+                <label for="password-id">Password</label>
+                {{form.password}}
+
+            </div>
+            {% if form.errors %}
+            <div class="alert alert-danger" role="alert">
+                Usuario o contrasena incorrectos. Favor de verificar
+              </div>
+            {% endif %}
+
+            <button class="twitter-btn">Log in</button>
+        </form>
+
+        <div class="footer">
+            <a href="#">Forget Password</a> .
+            <a href="#">Sign up to twitter</a>
+        </div>
+
+    </div>
+    {% endblock content %}

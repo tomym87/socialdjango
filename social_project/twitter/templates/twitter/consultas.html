@@ -1,0 +1,181 @@
+{% extends 'twitter/layout.html' %}
+{% load humanize %}
+{% block content %}
+<div id="main" class="container-fluid ">
+    <!-- Center -->
+    <br>
+    <div class="content">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-home-tab" data-toggle="tab" data-target="#nav-home"
+                    type="button" role="tab" aria-controls="nav-home" aria-selected="true">Seguimiento</button>
+                <button class="nav-link" id="nav-profile-tab" data-toggle="tab" data-target="#nav-profile" type="button"
+                    role="tab" aria-controls="nav-profile" aria-selected="false">Consultas</button>
+                <button class="nav-link" id="nav-contact-tab" data-toggle="tab" data-target="#nav-contact" type="button"
+                    role="tab" aria-controls="nav-contact" aria-selected="false">Todas</button>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                
+                {% for consulta in consultas %}
+                    {% if consulta.tipo == 'Seguimiento' %}
+                <div id="tweetCards">
+                    <!-- FOR LOOP HERE -->
+                    <div class="tweet-wrap mt-3 p-3" style="border-radius:20px">
+                        <div class="card">
+                            <img src="{{consulta.pic.url}}" class="card-img-top" alt="...">
+                            <div class="card-body p-2">
+                                <span class="badge badge-primary float-left ">{{ consulta.tipo }} </span><span
+                                    class="badge badge-success float-right">Fecha: {{ consulta.dato1 }} </span>
+                                <br>
+                                <div class="dropdown-divider"></div>
+                                <div>
+                                    
+                                       <h4>{{consulta.dato3}}</h4> 
+                                      
+                                    <table class="table table-striped table-sm">
+                                        <tbody>
+                                            <tr>
+                                                <td>Talla</td>
+                                                <td>{{consulta.talla}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Peso</td>
+                                                <td>{{consulta.peso}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Diam</td>
+                                                <td>{{consaulta.dato2}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="font-weight-bold p-0 m-0">Recomencadiones</p>
+                                <p class="card-text pt-0">{{consulta.recomendacion}}</p>
+                                <div class="dropdown-divider"></div>
+                                <span class="badge badge-warning">Proxima Cita: {{consulta.dato2}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FOR LOOP HERE -->
+
+                </div>
+                {% else %}
+                <!-- <div class="alert alert-warning" role="alert">
+                    No hay consultas de seguimento que mostrar
+                </div> -->
+                {% endif %}
+                {% endfor %}
+               
+
+                
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                
+                
+                {% for consulta in consultas %}
+                {%if consulta.tipo == 'Consulta' %}
+              
+                    
+                    <div class="tweet-wrap mt-3 p-3" style="border-radius:20px">
+                        <div class="card">
+                            <img src="{{consulta.pic.url}}" class="card-img-top" alt="...">
+                            <div class="card-body p-2">
+                                <span class="badge badge-primary float-left ">{{ consulta.tipo }} </span><span
+                                    class="badge badge-success float-right">Fecha: {{ consulta.dato1 }} </span>
+                                <br>
+                                <div class="dropdown-divider"></div>
+                                <div>
+                                    <table class="table table-striped table-sm">
+                                        <tbody>
+                                            <tr>
+                                                <td>Talla</td>
+                                                <td>{{consulta.talla}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Peso</td>
+                                                <td>{{consulta.peso}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Diam</td>
+                                                <td>{{consaulta.dato2}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="font-weight-bold p-0 m-0">Recomencadiones</p>
+                                <p class="card-text pt-0">{{consulta.recomendacion}}</p>
+                                <div class="dropdown-divider"></div>
+                                <span class="badge badge-warning">Proxima Cita: {{consulta.dato2}}</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                {% else %}
+                
+    
+                {% endif %}
+                {% endfor %}
+                
+                
+            </div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                {% for consulta in consultas %}
+                    
+                <div id="tweetCards">
+                    <!-- FOR LOOP HERE -->
+                    <div class="tweet-wrap mt-3 p-3" style="border-radius:20px">
+                        <div class="card">
+                            <img src="{{consulta.pic.url}}" class="card-img-top" alt="...">
+                            <div class="card-body p-2">
+                                <span class="badge badge-primary float-left ">{{ consulta.tipo }} </span><span
+                                    class="badge badge-success float-right">Fecha: {{ consulta.dato1 }} </span>
+                                <br>
+                                <div class="dropdown-divider"></div>
+                                <div>
+                                    <table class="table table-striped table-sm">
+                                        <tbody>
+                                            <tr>
+                                                <td>Talla</td>
+                                                <td>{{consulta.talla}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Peso</td>
+                                                <td>{{consulta.peso}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Diam</td>
+                                                <td>{{consaulta.dato2}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="font-weight-bold p-0 m-0">Recomencadiones</p>
+                                <p class="card-text pt-0">{{consulta.recomendacion}}</p>
+                                <div class="dropdown-divider"></div>
+                                <span class="badge badge-warning">Proxima Cita: {{consulta.dato2}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FOR LOOP HERE -->
+
+                </div>
+                
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Tweets -->
+
+        <!-- EndTweets -->
+
+
+    </div>
+    <!-- End Center -->
+
+
+
+</div>
+
+{% endblock content %}
