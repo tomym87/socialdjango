@@ -77,3 +77,9 @@ cd /home/tomy/env/md/
 mkdir vassals
 sudo ln -s /home/tomy/social_project/social_project_uwsgi.ini /home/tomy/env/md/vassals/
 sudo reboot
+ls
+cd social_project/
+ls
+cd social_project/
+ls
+cd ..
