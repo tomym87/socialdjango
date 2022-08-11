@@ -92,5 +92,13 @@ def consultas(request):
     consultas = Consultas.objects.all()
     context={'consultas':consultas}
     return render(request, 'twitter/consultas.html', context)
+
+def consulta(request, id):
+    consultas = Consultas.objects.filter(nombre_id = id)
+    context={'consultas':consultas}
+    return render(request, 'twitter/consultas.html', context)
+
+
+
     
     
