@@ -43,10 +43,22 @@ class Relationship(models.Model):
 
 class Hijos(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False)
-    nombre = models.CharField(max_length=50, default='nombre')
-    sexo = models.BooleanField(default=True)
-    tipo = models.CharField(max_length=30, default='nino')
+    nombre = models.CharField(max_length=50, default='Nombre')
+    sexo = models.CharField(max_length=10, default='M')
+    tipo = models.CharField(max_length=30, default='Niño')
     profile_pic = models.ImageField(default='default.png')
+    fecha_nac = models.DateField(auto_now=False,blank=True, null=True)
+    hora_nac = models.CharField(max_length=50, default='Hora nacimiento')
+    peso_nac = models.CharField(max_length=50, default='Peso Nacimiento')
+    talla_nac = models.CharField(max_length=50, default='Talla Nacimiento')
+    lugar_nac = models.CharField(max_length=50, default='Lugar Nacimiento')
+    tipo_nac = models.CharField(max_length=50, default='Tipo Nacimiento')
+    comentarios_nac = models.CharField(max_length=50, default='Comentarios Nacimiento')
+    campo1_nac = models.CharField(max_length=50, default='Campo1 Nacimiento')
+    campo2_nac = models.CharField(max_length=50, default='Campo2 Nacimiento')
+    
+    
+    
     
     def __str__(self):
         return f'{self.user} to {self.nombre}'

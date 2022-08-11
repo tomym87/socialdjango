@@ -59,35 +59,46 @@
                         <img class="card-img-top" src="{{ hijo.profile_pic.url }}" alt="Card image cap">
                         <div class="card-body p-2">
                           <div class="container p-1">
-                            <div class="row">
+                            <div class="row {% if hijo.tipo == 'Niño' %} bgnino {% else %} bgnina {% endif %} ">
                                 <div class="col" style="width: .5rem;">
-                                   Name: {{hijo.nombre}}
+                                   Nombre: <h5>{{hijo.nombre}}</h5> 
                                 </div>
                                 <div class="col">
-                                    Tipo:{{hijo.tipo}}
+                                    Sexo: <h5>{{hijo.tipo}}</h5>
+                                </div>
+                            </div>
+                            <hr class="my-4">
+                            <div class="row">
+                                <div class="col" style="width: .5rem;">
+                                    <span class="badge badge-secondary">Fecha nac.:</span> {{hijo.fecha_nac}}
+                                </div>
+                                <div class="col">
+                                    <span class="badge badge-secondary">Edad:</span> {{hijo.fecha_nac}}
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col" style="width: .5rem;">
-                                   Edad: 5
+                                    <span class="badge badge-secondary">Lugar nac.:</span> {{hijo.lugar_nac}}
                                 </div>
                                 <div class="col">
-                                    Genero: Macho
+                                    <span class="badge badge-secondary">Tipo de nac:</span> {{hijo.tipo_nac}}
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col" style="width: .5rem;">
-                                   id: {{hijo.id}}
+                                    <span class="badge badge-secondary">Talla:</span> {{hijo.talla_nac}}
                                 </div>
                                 <div class="col">
-                                    Genero: Macho
+                                    <span class="badge badge-secondary">Peso:</span> {{hijo.peso_nac}}
                                 </div>
                             </div>
                           </div>
+                          <hr class="my-4">
                         </div>
                         <a href="{% url 'consulta' hijo.id %}">
-                            ir
+                            <button type="button" class="btn btn-success">Ir a Seguimiento de consultas</button>
                         </a>
+                        
                       </div>
                    
                     <div class="tweet-info-counts">

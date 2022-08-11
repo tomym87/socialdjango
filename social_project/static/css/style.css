@@ -9,7 +9,10 @@ img {
 }
 
 .navbar {
-  background-color: #1E96EB /*#E0245E*/;
+  background: #2193b0 !important;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #6dd5ed, #2193b0) !important;  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #6dd5ed, #2193b0) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .navbar-brand {
@@ -229,4 +232,13 @@ a:link {
 }
 
 
+.bgnino{
+  background: #7cc3ffd9;
+  border: solid #c9c9c9 1px;
+}
+
+.bgnina{
+  background: #f5afe0d9;
+  border: solid #c9c9c9 1px;
+}
 
