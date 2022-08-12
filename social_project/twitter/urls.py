@@ -18,4 +18,6 @@ urlpatterns = [
 	path('hijos/', views.hijos, name='hijos'),
 	path('consultas/', views.consultas, name='consultas'),
     path('consulta/<int:id>/', views.consulta, name='consulta'),
+	path('vacunacion/', views.vacunacion, name='vacunacion'),
+	path('interes/', views.interes, name='interes'),
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

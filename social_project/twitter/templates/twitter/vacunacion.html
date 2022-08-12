@@ -1,0 +1,94 @@
+{% extends 'twitter/layout.html' %}
+
+{% block content %}
+
+<body class="login-page">
+    <div class="twitter-login-box">
+        <header>
+            <h3>Calendario de vacunacion</h3>
+        </header>
+
+        <table class="table table-sm text-center">
+            <thead>
+              <tr>
+                <th class="text-center" scope="col" colspan="5" >Esquema nacional de vacunacion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Nac</th>
+                <td style="background:#fda934">BGC</td>
+                <td colspan="3" style="background:#d8affe">HEPATITIS B</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">2 mes</th>
+                <td style="background:#fffda6">Pentavalente acelular</td>
+                <td style="background:#d8affe">Hepatitis B</td>
+                <td style="background:#fe9191">Rotavirus</td>
+                <td style="background:#e9ded8">Neumococo conjugada</td>
+              </tr>
+              <tr>
+                <th scope="row">4 mes</th>
+                <td colspan="2" style="background:#fffda6">Pentavalente acelular</td>
+                <td style="background:#fe9191">Rotavirus</td>
+                <td style="background:#e9ded8">Neumococo Conjugada</td>
+              </tr>
+              <tr>
+                <th scope="row">6 mes</th>
+                <td style="background:#fffda6">Pentavalente acelular</td>
+                <td style="background:#d8affe">Hepatitis B</td>
+                <td style="background:#fe9191">Rotavirus</td>
+                <td style="background:#00cbd1">Influenza</td>
+              </tr>
+              <tr>
+                <th scope="row">7 mes</th>
+                <td colspan="4" style="background:#00cbd1">Influenza Segunda Dosis</td>
+              </tr>
+              <tr>
+                <th scope="row">12 mes</th>
+                <td colspan="3" style="background:#dfad00">SRP</td>
+                <td style="background:#e9ded8">Neumococo Conjugada</td>
+              </tr>
+              <tr>
+                <th scope="row">18 mes</th>
+                <td colspan="4" style="background:#fffda6">Pentavalente acelular</td>
+              </tr>
+              <tr>
+                <th scope="row">2 años</th>
+                <td colspan="4" style="background:#00cbd1">Influenza Refuerzo Anual</td>
+              </tr>
+              <tr>
+                <th scope="row">3 años</th>
+                <td colspan="4" style="background:#00cbd1">Influenza Refuerzo Anual</td>
+              </tr>
+              <tr>
+                <th scope="row">4 años</th>
+                <td colspan="3" style="background:#ff78c4">DPT (Refuerzo)</td>
+                <td  style="background:#00cbd1">Influenza (Refuerzo)</td>
+              </tr>
+              <tr>
+                <th scope="row" rowspan="2">5 años</th>
+                <td colspan="4" style="background:#00cbd1">Influenza Refuerzo Anual</td>
+              </tr>
+              <tr>
+                <td colspan="4" style="background:#f5edeb">OPV (Polio Oral)</td>
+              </tr>
+                <tr>
+                <th scope="row">6 años</th>
+                <td colspan="4" style="background:#dfad00">SRP (Refuerzo)</td>
+              </tr>
+              <tr>
+                <th scope="row">11 años</th>
+                <td colspan="4" style="background:#fff500">VPH</td>
+              </tr>
+            </tbody>
+          </table>
+
+        <div class="footer">
+            <a href="#">¿Ya tienes una cuenta? Login</a>
+        </div>
+
+    </div>
+
+    {% endblock content %}

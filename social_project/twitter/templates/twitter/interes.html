@@ -5,51 +5,18 @@
 
     <div id="main" class="container-fluid d-flex">
         <!-- Barra Izquierda -->
-        <div class="sidebar m-5 d-none d-md-block">
-            <div class="">
-                <div class="card " style="width: 18rem; text-align:center;border-radius: 20px;">
-                    <img class="card-img-top rounded-circle"
-                        style="width:60%; position: relative;left: 62px;padding-top: 20px;"
-                        src="{{ request.user.profile.image.url }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title font-weight-bold">{{ request.user.first_name }}</h5>
-                        <h6 class="card-title font-weight-bold">@{{ request.user }}</h6>
-                        
-
-                        <p class="card-text">{{ request.user.profile.bio }}</p>
-                        <h6 class="card-title font-weight-bold">
-                        {{ request.user.profile.followers.count }} Followers   
-                        {{ request.user.profile.following.count }} Following
-                        </h6>
-                        <a href="#" class="btn  text-white rounded-pill">Mi perfil</a>
-                    </div>
-
-                </div>
-                <a href="{% url 'editar' %}" id="addATweetLeft" onclick="addTweet()" type="button"
-                style="border-radius: 30px; font-size: 1.1rem; font-weight:bold;"
-                class="btn btn-lg btn-block mt-4 text-white ">Editar mi perfil</a>
-            </div>
-        </div>
-        <!-- End Barra Izquierda -->
         
 
         <!-- Center -->
         
         <div class="content pt-3">
             <div class="jumbotron" style="background:white">
-                <h3 class="">Hola, {{ request.user.first_name }}</h3>
-                <p class="lead">La clinica tiene a bien presentarte esta aplicacion para llevar el control de tu pequeno</p>
-                <hr class="my-4">
-                <p>Esperando tre sea de utilidad te invitamos a navegar en ella.</p>
-                <div class="mx-auto" style="width:60%">
-                    <img src="{% static 'img/pequeno.png' %}" alt="" class="rounded mx-auto d-block ">
-                </div>
-                <hr class="my-4">
+               
                 <div>
-                    <div class="container px-4 py-2" id="icon-grid">
-                        <h4 class="pb-1 border-bottom">Recursos de interes</h4>
+                    <div class="container px-3 py-1" id="icon-grid">
+                        <h4 class="pb-2 border-bottom">Recursos de interes</h4>
                     
-                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-2">
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 py-2">
                           <a href="{% url 'vacunacion' %}">
                             <div class="col d-flex align-items-start border-bottom">
                             <i class="fa fa-calendar fa-2x pt-3" style="color:#1dabab"></i>
@@ -59,14 +26,14 @@
                             </div>
                           </div> 
                         </a> 
-                          <div class="col d-flex align-items-start border-bottom">
+                          <div class="col d-flex align-items-start border-bottom pt-3">
                             <i class="fa fa-user-md fa-2x pt-3" style="color:#1dabab"></i>
                             <div class="ml-3">
                               <h5 class="fw-bold mb-0">Brotes de crecimiento</h5>
                               <p>Consulta los brotes de crecimiento mas comunes.</p>
                             </div>
                           </div>                   
-                          <div class="col d-flex align-items-start border-bottom">
+                          <div class="col d-flex align-items-start border-bottom pt-3">
                             <i class="fa fa-smile-o fa-2x pt-3" style="color:#1dabab"></i>
                             <div class="ml-3">
                               <h5 class="fw-bold mb-0">Recomendaciones lactancia</h5>

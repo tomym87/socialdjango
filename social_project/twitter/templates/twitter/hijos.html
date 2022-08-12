@@ -47,14 +47,17 @@
 
 
             <!-- Tweets -->
-            <br>
-                <h4>Listado de Pacientes</h4>
+
+            <div class="fs-2 mb-3">
+
+            <h4>Listado de pacientes</h4>
+              </div>
                 <hr class="solid">
               
             {% for hijo in hijos %}
             <div id="tweetCards">
                 <!-- FOR LOOP HERE -->
-                <div class="tweet-wrap p-3" style="border-radius:20px">
+                <div class="tweet-wrap p-3 mt-2 mb-4" style="border-radius:20px">
                     <div class="card" >
                         <img class="card-img-top" src="{{ hijo.profile_pic.url }}" alt="Card image cap">
                         <div class="card-body p-2">

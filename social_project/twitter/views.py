@@ -98,6 +98,12 @@ def consulta(request, id):
     context={'consultas':consultas}
     return render(request, 'twitter/consulta.html', context)
 
+def vacunacion(request):
+    return render(request, 'twitter/vacunacion.html')
+
+def interes(request):
+    return render(request, 'twitter/interes.html')
+
 
 
     
