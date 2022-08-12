@@ -11,48 +11,21 @@
                
                 <div>
                     <div class="container px-3 py-1" id="icon-grid">
-                        <h4 class="pb-2 border-bottom">Recursos de interes</h4>
-                    
-                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 py-2">
-                          <a href="{% url 'vacunacion' %}">
-                            <div class="col d-flex align-items-start border-bottom">
-                            <i class="fa fa-calendar fa-2x pt-3" style="color:#1dabab"></i>
-                            <div class="ml-3">
-                              <h5 class="fw-bold mb-0">Calendario Vacunacion</h5>
-                              <p>Revisa y programa la vacunacion de tu pequeño.</p>
-                            </div>
-                          </div> 
-                        </a> 
-                        <a href="{% url 'brotes' %}">
-                          <div class="col d-flex align-items-start border-bottom pt-3">
-                            <i class="fa fa-user-md fa-2x pt-3" style="color:#1dabab"></i>
-                            <div class="ml-3">
-                              <h5 class="fw-bold mb-0">Brotes de crecimiento</h5>
-                              <p>Consulta los brotes de crecimiento mas comunes.</p>
-                            </div>
-                          </div> 
-                        </a>                  
-                          <div class="col d-flex align-items-start border-bottom pt-3">
-                            <i class="fa fa-smile-o fa-2x pt-3" style="color:#1dabab"></i>
-                            <div class="ml-3">
-                              <h5 class="fw-bold mb-0">Recomendaciones lactancia</h5>
-                              <p>Consulta los brotes de crecimiento mas comunes.</p>
-                            </div>
-                          </div> 
-                          <div class="col d-flex align-items-start border-bottom pt-3">
-                            <i class="fa fa-lemon-o fa-2x pt-3" style="color:#1dabab"></i>
-                            <div class="ml-3">
-                              <h5 class="fw-bold mb-0">Alimentos potencialmente alergenicos</h5>
-                              <p>Informacion sobre lactancia materna.</p>
-                            </div>
-                          </div> 
-                          <div class="col d-flex align-items-start border-bottom pt-3">
-                            <i class="fa fa-medkit fa-2x pt-3" style="color:#1dabab"></i>
-                            <div class="ml-3">
-                              <h5 class="fw-bold mb-0">Medicamentos potencialmente alergenicos</h5>
-                              <p>Informacion sobre lactancia materna.</p>
-                            </div>
-                          </div> 
+                        <h4 class="pb-2 border-bottom">Brotes de Crecimiento</h4>
+                        <div class="card" >
+                          <img class="card-img-top" src="{% static 'img/brotes.jpg' %}" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">3 Brotes comunes</h5>
+                            <p class="card-text">Hay tres momentos en la vida de un bebé que suelen presentarse brotes de crecimiento bien caracterizados:</p>
+                            <p>15 a 20 días de edad: durante la tercera semana de vida los bebés empiezan a demandar más tiempo en el pecho o más tomas al día. Esto, que es para aumentar la producción de leche (demanda-oferta), hace creer a la madre que su leche no es suficiente para satisfacer las necesidades de su bebé, con el riesgo de destetar si se introducen sucedáneos de leche materna.</p>
+                            <p>Este brote dura entre 2 a 3 días, y suele ser muy cansador para la madre. Debemos quedarnos tranquilas si el bebé tiene deposiciones normales y ha recuperado sin problemas el peso de nacimiento entre los 10 y 15 días: esto quiere decir que todo va bien.</p>
+                            <p>6 a 7 semanas de edad: ya al mes y medio llevamos un buen tiempo amamantando y cuando creemos que llegó la calma, nuestro bebé puede empezar a rechazar el pecho: se aleja, no quiere tomar. Esto sucede ya que hay un cambio repentino y transitorio del sabor de la leche a uno más salado, lo que a algunos bebés no les agrada. Este brote dura aproximadamente 1 semana.</p>
+                            <p>3 meses de edad: este es el brote más reconocido por las madres, y el más largo (aproximadamente 1 mes de duración). Los bebés a los 3 meses se tornan eficientes para extraer la leche por lo que están menos tiempo al pecho de las madres, lo que genera en ellas una errada sensación de que 'tienen poca leche'. Esto se suma a que sienten los pechos flácidos, aumentando su preocupación. Además, los bebés se empiezan a distraer con facilidad por lo que toman leche y rápidamente se sueltan.</p>
+                            <p>Junto a esta maduración en el bebé que lo hace ser un 'experto en succionar', está el hecho de que el pecho deja de almacenar la leche y empieza a producirla en el momento de la succión (por eso los pechos ya no se sienten llenos).</p>
+                            <button class="btn btn-primary">Go somewhere</button>
+                          </div>
+                        </div>
+                          
                          
                         </div>
                         <div class="one-half first ex1">Example<br />One</div>

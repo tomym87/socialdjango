@@ -69,11 +69,15 @@ class Consultas(models.Model):
     fecha = models.DateField(auto_now=True)
     talla = models.CharField(max_length=20, default='talla', blank=True)
     peso = models.CharField(max_length=20, default='peso', blank=True)
+    diam1 = models.CharField(max_length=20, default='diam cr', blank=True)
+    diam2 = models.CharField(max_length=20, default='diam est', blank=True)
     nombre = models.ForeignKey(Hijos, on_delete=models.CASCADE, null=True, blank=True)
     recomendacion = models.CharField(max_length=200, default='Recomendacion')
     dato1 = models.CharField(max_length=100, default='dato1')
     dato2 = models.CharField(max_length=100, default='dato2')
     dato3 = models.CharField(max_length=100, default='dato3')
+    dato4 = models.CharField(max_length=100, default='dato4')
+
     pic = models.ImageField(default='default.png')
     
     def __str__(self):

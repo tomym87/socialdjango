@@ -104,6 +104,9 @@ def vacunacion(request):
 def interes(request):
     return render(request, 'twitter/interes.html')
 
+def brotes(request):
+    return render(request, 'twitter/brotes.html')
+
 
 
     
