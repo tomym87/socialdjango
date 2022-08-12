@@ -241,5 +241,28 @@ a:link {
   border: solid #c9c9c9 1px;
 }
 
+.one-half {
+  position: relative; 
+  color:#fff;
+  font-size:115%;
+  font-weight:500;
+  height:10px;
+  text-align:center;
+  }
+  
+  .ex1:before{
+  position: absolute;
+  font-family: 'FontAwesome';
+  font-size:160px;
+  top: -160px;
+  right: -10px;
+  color:rgb(72, 167, 255);
+  opacity:.3;
+  }
+  
+  .ex1:before { content: "\f05a"; }
+  
+
+
 
 
