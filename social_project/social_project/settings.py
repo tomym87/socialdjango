@@ -25,7 +25,7 @@ PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static/js', 'serviceworker.js'
 SECRET_KEY = 'django-insecure-63v!%qe2_=02yqv(tcexvha$tek^g19zlz7p8vx7bf2%g_%20u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
