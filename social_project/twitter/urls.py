@@ -4,12 +4,13 @@ from . import views
 from django.contrib.auth.views import LoginView, LogoutView
 from django.conf import settings
 from django.conf.urls.static import static
+from django.urls import re_path as url
 
 urlpatterns = [ 
     path('', views.home, name='home'), 
     path('home/', views.home, name='home'), 
     path('home2', views.home2, name='home2'), 
-    path('', include('pwa.urls')),
+    url('', include('pwa.urls')),
     path('register/', views.register, name='register'),
     path('login/', LoginView.as_view(template_name='twitter/login.html'), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
