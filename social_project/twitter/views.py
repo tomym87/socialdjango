@@ -6,6 +6,9 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
 
+def home(request):
+    return redirect('home')
+
 @login_required
 def home(request):
 	posts = Post.objects.filter(user=request.user)
@@ -15,7 +18,7 @@ def home(request):
 			post = form.save(commit=False)
 			post.user = request.user
 			post.save()
-			return redirect('home')
+			return redirect('home/')
 	else:
 		form = PostForm()
 
@@ -40,7 +43,7 @@ def delete(request, post_id):
 	post.delete()
 	return redirect('home')
 
-
+@login_required
 def profile(request, username):
 	user = User.objects.get(username=username)
 	posts = user.posts.all()
@@ -88,22 +91,27 @@ def hijos(request):
     context = {'hijos':hijos}
     return render(request, 'twitter/hijos.html', context)
 
+@login_required
 def consultas(request):
     consultas = Consultas.objects.all()
     context={'consultas':consultas}
     return render(request, 'twitter/consultas.html', context)
 
+@login_required
 def consulta(request, id):
     consultas = Consultas.objects.filter(nombre_id = id)
     context={'consultas':consultas}
     return render(request, 'twitter/consulta.html', context)
 
+@login_required
 def vacunacion(request):
     return render(request, 'twitter/vacunacion.html')
 
+@login_required
 def interes(request):
     return render(request, 'twitter/interes.html')
 
+@login_required
 def brotes(request):
     return render(request, 'twitter/brotes.html')
 
