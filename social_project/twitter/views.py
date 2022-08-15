@@ -7,10 +7,10 @@ from django.contrib.auth.decorators import login_required
 
 
 def home(request):
-    return redirect('home')
+    return redirect('home2')
 
 @login_required
-def home(request):
+def home2(request):
 	posts = Post.objects.filter(user=request.user)
 	if request.method == 'POST':
 		form = PostForm(request.POST)
@@ -18,7 +18,7 @@ def home(request):
 			post = form.save(commit=False)
 			post.user = request.user
 			post.save()
-			return redirect('home/')
+			return redirect('home')
 	else:
 		form = PostForm()
 
