@@ -9,7 +9,7 @@ from django.urls import re_path as url
 urlpatterns = [ 
     path('', views.home, name='home'), 
     path('home/', views.home, name='home'), 
-    path('home2', views.home2, name='home2'), 
+    path('home2/', views.home2, name='home2'), 
     url('', include('pwa.urls')),
     path('register/', views.register, name='register'),
     path('login/', LoginView.as_view(template_name='twitter/login.html'), name='login'),
