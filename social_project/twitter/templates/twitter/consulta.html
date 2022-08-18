@@ -27,39 +27,46 @@
                             <img src="{{consulta.pic.url}}" class="card-img-top" alt="...">
                             <div class="card-body p-2">
                                 <span class="badge badge-primary float-left ">{{ consulta.tipo }} </span><span
-                                    class="badge badge-success float-right">Fecha: {{ consulta.dato1 }} </span>
+                                    class="badge badge-success float-right">Fecha: {{ consulta.consulta_fecha }} </span>
                                 <br>
                                 <div class="dropdown-divider"></div>
                                 <div>
                                     
-                                       <h4>{{consulta.dato3}}</h4> 
+                                       <h4>{{consulta.consulta_edad}}</h4> 
                                       
                                     <table class="table table-striped table-sm">
                                         <tbody>
                                             <tr>
-                                                <td><i class="fa fa-bar-chart" aria-hidden="true"></i>   Talla</td>
-                                                <td>{{consulta.talla}}</td>
+                                                <td><i class="fa fa-bar-chart" aria-hidden="true" style='color:#007bff'></i>   Talla</td>
+                                                <td>{{consulta.talla}} cm</td>
                                             </tr>
                                             <tr>
-                                                <td><i class="fa fa-balance-scale" aria-hidden="true"></i>   Peso</td>
-                                                <td>{{consulta.peso}}</td>
+                                                <td><i class="fa fa-balance-scale" aria-hidden="true" style='color:#007bff'></i>   Peso</td>
+                                                <td>{{consulta.peso}} kg</td>
                                             </tr>
                                             <tr>
-                                                <td><i class="fa fa-arrows-h" aria-hidden="true"></i> Diam Craneo</td>
-                                                <td>{{consulta.diam1}}</td>
+                                                <td><i class="fa fa-arrows-h" aria-hidden="true" style='color:#007bff'></i> Diam Craneo</td>
+                                                <td>{{consulta.diam1}} cm</td>
                                             </tr>
                                             <tr>
-                                                <td><i class="fa fa-arrows-h" aria-hidden="true"></i> Diam Estomago</td>
-                                                <td>{{consulta.diam2}}</td>
+                                                <td><i class="fa fa-arrows-h" aria-hidden="true" style='color:#007bff'></i> Diam Estomago</td>
+                                                <td>{{consulta.diam2}} cm</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
-                                <p class="font-weight-bold p-0 m-0">Recomendaciones</p>
-                                <p class="card-text pt-0">{{consulta.recomendacion}}</p>
+                                <div class="alert alert-info" role="alert">
+                                    <p class="font-weight-bold p-0 m-0"><i class="fa fa-user-md fa-2x" aria-hidden="true"></i> Recomendaciones</p>
+                                    <p class="card-text pt-0">{{consulta.recomendacion}}</p>
+                                </div>
+                                <div class="alert alert-warning" role="alert">
+                                    <p class="font-weight-bold p-0 m-0"><i class="fa fa-briefcase fa-2x" aria-hidden="true"></i></i> Tarea</p>
+                                    <p class="card-text pt-0">{{consulta.consulta_tarea}}</p>
+                                </div>
+                                
                                 <a><i class="fa fa-download" aria-hidden="true"></i>Descargas</a>
                                 <div class="dropdown-divider"></div>
-                                <span class="badge badge-warning">Proxima Cita: {{consulta.dato2}}</span>
+                                <span class="badge badge-warning">Proxima Cita: {{consulta.consulta_proxcita}}</span>
                             </div>
                         </div>
                     </div>

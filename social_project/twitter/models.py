@@ -65,7 +65,7 @@ class Hijos(models.Model):
     
 class Consultas(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False, default=1)
-    tipo = models.CharField(max_length=30, default='consulta')
+    tipo = models.CharField(max_length=30, default='Consulta')
     fecha = models.DateField(auto_now=True)
     talla = models.CharField(max_length=20, default='talla', blank=True)
     peso = models.CharField(max_length=20, default='peso', blank=True)
@@ -73,10 +73,11 @@ class Consultas(models.Model):
     diam2 = models.CharField(max_length=20, default='diam est', blank=True)
     nombre = models.ForeignKey(Hijos, on_delete=models.CASCADE, null=True, blank=True)
     recomendacion = models.CharField(max_length=200, default='Recomendacion')
-    dato1 = models.CharField(max_length=100, default='dato1')
-    dato2 = models.CharField(max_length=100, default='dato2')
-    dato3 = models.CharField(max_length=100, default='dato3')
-    dato4 = models.CharField(max_length=100, default='dato4')
+    consulta_fecha = models.CharField(max_length=100, default='Fecha Consulta')
+    consulta_proxcita = models.CharField(max_length=100, default='Prox cita')
+    consulta_edad = models.CharField(max_length=100, default='Edad consulta')
+    consulta_tarea = models.CharField(max_length=100, default='Tarea')
+    consulta_exta = models.CharField(max_length=100, default='dato extra')
 
     pic = models.ImageField(default='default.png')
     
